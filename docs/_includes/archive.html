@@ -1,13 +1,13 @@
-{% if site.plugins contains "jekyll/tagging" %}
+<!-- {% if site.plugins contains "jekyll/tagging" %}
 	{% assign size = site | tag_cloud | size %}
-	<!-- {% if size != 0 %} -->
-	<h2>Article/Writeups Tags</h2>
-	<div class="tag-cloud">{{ site | tag_cloud }}</div>
-	<!-- {% endif %} -->
-{% endif %}
+	{% if size != 0 %}
+		<h2>Article/Writeups Tags</h2>
+		<div class="tag-cloud">{{ site | tag_cloud }}</div>
+	{% endif %}
+{% endif %} -->
 
-<!-- <h2>Article/Writeups Tags</h2>
-<div class="post-links">
+<h2>Article/Writeups Tags</h2>
+<div class="tag-cloud">
 	{% capture temptags %}
 		{% for tag in site.tags %}
 			{{ tag[1].size | plus: 1000 }}#{{ tag[0] }}#{{ tag[1].size }}
@@ -18,6 +18,6 @@
 	{% for temptag in sortedtemptags %}
 		{% assign tagitems = temptag | split: '#' %}
 		{% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-		<a href="/tag/{{ tagname }}"><code class="highligher-rouge"><nobr>{{ tagname }}</nobr></code></a>
+		<a href="/tag/{{ tagname }}">{{ tagname }}</a>
 	{% endfor %}
-</div> -->
+</div>
