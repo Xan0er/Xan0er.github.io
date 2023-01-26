@@ -43,7 +43,7 @@ dash:
     - url: /feed.xml
       icon: fas fa-rss-square
       color: teal
-    
+
   info_links:
     - url: /about
       icon: fas fa-address-card
@@ -67,6 +67,7 @@ plugins:
  - jekyll-seo-tag
  - jekyll-paginate
  - liquid-md5
+ - jekyll/tagging
 
 # Replaces the default avatar provider (gravatar)
 avatar_source: github

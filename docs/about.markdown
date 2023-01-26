@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-![Logo](favicon.png)
+![Logo](../favicon.png)
 
 ### Pentester | Programmer | Part-Time Bug Hunter [@Bugcrowd](https://bugcrowd.com/) | CTF Player
 

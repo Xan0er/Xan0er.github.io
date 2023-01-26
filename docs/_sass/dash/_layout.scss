@@ -52,21 +52,75 @@
 }
 
 /**
- * Author box
+ * Right-to-Left support
  */
+
+ html.direction--rtl {
+  .author-box {
+    text-align: right;
+    & > .description {
+      direction: rtl;
+    }
+    & > img {
+      margin-right: 0em;
+      margin-left: 1em;
+    }
+  }
+  ol > li, ul > li {
+    text-align: right;
+    direction: rtl;
+    &::before {
+      float: right;
+      margin-left: 0.5em;
+    }
+  }
+  h1, h2, h3, h4, h5, h6 {
+    direction: rtl;
+    text-align: right;
+  }
+  .post-link-wrapper {
+    direction: rtl;
+  }
+  .post {
+    direction: rtl;
+  }
+  .pagination {
+    text-align: right;
+  }
+  .tag-cloud {
+    direction: rtl;
+    text-align: right;
+  }
+  .related-posts {
+    direction: rtl;
+    text-align: right;
+
+    & > li::before {
+      margin-right: 0;
+      margin-left: 0.5em;
+    }
+  }
+  pre {
+    direction: ltr;
+    text-align: left;
+  }
+}
 
  .author-box {
    margin-bottom: 1em;
    text-align: left;
    min-height: 72px;
    font-style: italic;
+   display: inline-flex;
+   & > .description {
+     flex:8;
+   }
    & > .author-avatar {
-     float: left;
-     white-space: pre-line;
      margin-right: 1em;
      width: 72px;
-     height: 72px;
+     height: 100%;
      border-radius: 0.3em;
+     flex: 1;
    }
  }
 
@@ -169,7 +223,7 @@
     }
 
     & > p {
-        display: block;
+        display: inline-block;
         padding-left: 3em;
     }
 
@@ -180,6 +234,10 @@
       float: left;
 
       font-size: 2em;
+    }
+
+    & > ul {
+      margin-left: 3em;
     }
 
     li {
@@ -369,4 +427,8 @@ ul.related-posts {
         }
         color: $color-yellow;
     }
+}
+
+.modal{
+  cursor: pointer;
 }
