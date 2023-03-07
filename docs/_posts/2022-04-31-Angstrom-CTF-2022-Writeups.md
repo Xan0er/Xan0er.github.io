@@ -21,11 +21,13 @@ Also, I have completed the writeup of this CTF after almost a year since I was b
 
 <br><img src="/assets/images/angstrom_ctf_2022/interwebz_1.png" alt="interwebz">
 
+<br>
 For this challenge, we only have to connect to the mentioned domain and port in the challenge description. For that, I used the **netcat** command.
 ```
 nc challs.actf.co 31335
 ```
 
+<br>
 So, by running the above command, I captured the flag.
 > actf{plugged_in_and_ready_to_go}
 
@@ -34,14 +36,17 @@ So, by running the above command, I captured the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/confetti_1.png" alt="confetti">
 
+<br>
 We are given an image in this challenge so it could be possible that the flag is hiddent inside this image. Here's a preview of the image:
 
 <br><img src="/assets/images/angstrom_ctf_2022/confetti_2.png" alt="confetti">
 
+<br>
 I ran the **file** command first in order to find the type of the file. It's a PNG image file.
 
 <br><img src="/assets/images/angstrom_ctf_2022/confetti_3.png" alt="confetti">
 
+<br>
 Then I passed the image through **binwalk** first to see if there was anything else attached to the file. Going back to the lyrics we were given for the description of this challenge, it mentions confetti dropping from the sky. Reminds us of a certain binwalk argument that looks like a star falling from the sky:
 ``` 
 binwalk --dd ".*" confetti.png
@@ -51,10 +56,12 @@ binwalk --dd ".*" confetti.png
 
 <br><img src="/assets/images/angstrom_ctf_2022/confetti_5.png" alt="confetti">
 
+<br>
 As you can see in the above image, there are many image files extracted with the **binwalk**. So our flag should be in one of them.
 
 <br><img src="/assets/images/angstrom_ctf_2022/confetti_6.png" alt="confetti">
 
+<br>
 We got our flag:
 > actf{confetti_4_u}
 
@@ -63,12 +70,14 @@ We got our flag:
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_1_1.png" alt="shark_1">
 
+<br>
 In this challenge, we are give a network capture file with extention **pcapng**. So, I have to analyze this file using a program called **WireShark** and find the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_1_2.png" alt="shark_1">
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_1_3.png" alt="shark_1">
 
+<br>
 Next, I followed one of the first network TCP streams to see the content which is being sent via the TCP protocol. And, I got lucky because I captured the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_1_4.png" alt="shark_1">
@@ -80,18 +89,22 @@ Next, I followed one of the first network TCP streams to see the content which i
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_2_1.png" alt="shark_2">
 
+<br>
 Just like the previous challenge, we are given a network packet capture file again in this challenge but our goal remains same i.e. capturing the flag. We will open this file in the **Wireshark** and analyze the network packets. 
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_2_2.png" alt="shark_2">
 
+<br>
 In one of the TCP streams, I came across content which looks like image data since the starting bytes of the content contained the **JFIF** which is the header for the *JPEG* image type.
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_2_3.png" alt="shark_2">
 
+<br>
 I changed the show data as from **ASCII** to **Raw** and saved the image as JPEG image.
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_2_4.png" alt="shark_2">
 
+<br>
 We have our flag in the extracted image from the packet capture file.
 
 <br><img src="/assets/images/angstrom_ctf_2022/shark_2_5.png" alt="shark_2">
@@ -106,8 +119,10 @@ We have our flag in the extracted image from the packet capture file.
 
 <br><img src="/assets/images/angstrom_ctf_2022/flash_1.png" alt="flash">
 
+<br>
 In this challenge, It looks like a site where fake flags are displayed when you access it. If you look closely, the display will change for a moment. It seems that js is instantaneously replacing it with a real flag. So, I have to use my browser's features to set breakpoints on changes. 
 
+<br>
 Once I did that, I got the flag.
 > actf{sp33dy_l1ke_th3_fl4sh}
 
@@ -116,6 +131,7 @@ Once I did that, I got the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/auth_skip_1.png" alt="auth_skip">
 
+<br>
 For this, we have to skip the authentication part and capture the flag located on the other side of the authentication. When I try to access the web page, it looks like a login form, but since I don't have the credentials to login so I proceed further. The source code of the authentication module looks like this:
 ```
 app.get("/", (req, res) => {
@@ -127,11 +143,13 @@ app.get("/", (req, res) => {
 });
 ```
 
+<br>
 By reviewing the above code, I came to a conclusion that I have to pass cookie **user** with value of **admin** in order to successfully by pass the authentication. I used curl for this purpose:
 ```
 curl https://auth-skip.web.actf.co/ -H "Cookie: user=admin"
 ```
 
+<br>
 After sending request, I got the flag.
 > actf{passwordless_authentication_is_the_new_hip_thing}
 
@@ -140,6 +158,7 @@ After sending request, I got the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/crumbs_1.png" alt="crumbs">
 
+<br>
 When we visit the web page of this challenge, it gives us the url of the next webpage to follow. I used **curl** command to demonstrate how it looked on the webpage
 ```
 curl https://crumbs.web.actf.co/
@@ -152,6 +171,7 @@ curl https://crumbs.web.actf.co/24c73741-cdd9-4c76-bf79-fb82304a6ceb
     Go to 1eb4cc3f-204b-4ba2-acd7-30d833676347
 ```
 
+<br>
 So, as per my intuition, we have to keep following the following until we reach the flag or we reach a url that gives us the flag. But we don't know how many URLs we have to go through since there could be 100s or 1000s of URLs so I wrote a simple script to capture the flag in python.
 ```
 import requests
@@ -170,6 +190,7 @@ while True:
     next_path = text.replace("Go to ", "")
 ```
 
+<br>
 Thus, eventually I got the flag.
 > actf{w4ke_up_to_th3_m0on_6bdc10d7c6d5}
 
@@ -181,6 +202,7 @@ Thus, eventually I got the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/caesar_1.png" alt="caesar">
 
+<br>
 We are given an encrypted string which we have to decode in order to get the flag. There is a hint in the challenge title that this could be the **Caesar** cipher. 
 ```
 sulx{klgh_jayzl_lzwjw_ujqhlgyjshzwj_kume}
@@ -199,10 +221,12 @@ So, I payed a little visit to the [Dcode Caesar Code](https://www.dcode.fr/chiff
 
 <br><img src="/assets/images/angstrom_ctf_2022/baby3_1.png" alt="baby3">
 
+<br>
 After running the **file** command, I found out that this is an **ELF 64-bit Linux Executable** file.
 
 <br><img src="/assets/images/angstrom_ctf_2022/baby3_2.png" alt="baby3">
 
+<br>
 I ran the `strings chall` command and found the flag.
 
 <br><img src="/assets/images/angstrom_ctf_2022/baby3_3.png" alt="baby3">
