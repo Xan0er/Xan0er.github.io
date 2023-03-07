@@ -10,13 +10,13 @@ permalink: /about/
 
 Hello, my name is Gurvinder Singh AKA ***Xan0er***. I am a self taught Python/Django developer and I have 1 year of experience. Also, I participate in Bug Bounty programs as a part-time bug bounty hunter. I also play CTFs from time to time. So if you want to play sometime with me, feel free to ping me on my Discord -> [Xan0er#3102](https://discordapp.com/users/Xan0er#3102)
 
-### My Badges:
+### My Infosec Skills:
 
-> <span style="color:#E34D79">***Codewars***</span>
+<!-- > <span style="color:#E34D79">***Codewars***</span> -->
 
-<img src="https://www.codewars.com/users/Xan0er/badges/large" />
+<!-- <img src="https://www.codewars.com/users/Xan0er/badges/large" /> -->
 
-<br>
+<!-- <br> -->
 
 > <span style="color:#E34D79">***TryHackMe***</span>
 
