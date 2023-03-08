@@ -6,7 +6,8 @@ permalink: /search/
 
 <!-- Html Elements for Search -->
 <div id="search-container">
-<center><h1>Search</h1></center>
+<center><h1><b>Search</b></h1></center>
+
 <input type="text" id="search-input" placeholder="Search Articles" style="width: 100%; padding: 12px 20px; margin: 8px 0; box-sizing: border-box; border: 5px solid #5575FC; border-radius: 25px;">
 <ul id="results-container"></ul>
 

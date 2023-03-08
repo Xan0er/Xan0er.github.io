@@ -45,6 +45,9 @@ dash:
       color: teal
 
   info_links:
+    - url: /badges
+      icon: fas fa-trophy
+      color: blue
     - url: /about
       icon: fas fa-address-card
       color: green

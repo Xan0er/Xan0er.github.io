@@ -1,12 +1,14 @@
 <!-- {% if site.plugins contains "jekyll/tagging" %}
 	{% assign size = site | tag_cloud | size %}
 	{% if size != 0 %}
-		<h2>Article/Writeups Tags</h2>
+		<h2><b>Article/Writeups Tags</b></h2>
 		<div class="tag-cloud">{{ site | tag_cloud }}</div>
 	{% endif %}
 {% endif %} -->
 
-<h2>Article/Writeups Tags</h2>
+<h2><b>Article/Writeups Tags</b></h2>
+<br/>
+
 <div class="tag-cloud">
 	{% capture temptags %}
 		{% for tag in site.tags %}
