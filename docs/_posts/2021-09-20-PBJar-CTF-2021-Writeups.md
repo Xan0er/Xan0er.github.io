@@ -3,7 +3,7 @@ layout: post
 title: "PB Jar CTF 2021 Writeups"
 date: 2021-09-20 17:15:00 +0530
 categories: Infosec
-tags: pbjar, ctf
+tags: ctf pbjar-ctf 2021
 ---
 
 I am back with another writeup of the CTF which I played this week. It was the **PBJar CTF 2021** and I had a lot of fun while playing this CTF. I was able to solve some of the challenges from this CTF and I hope that you will like these challenges writeups so here we go!

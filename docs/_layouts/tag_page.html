@@ -35,14 +35,27 @@ layout: default
   </div>-->
 
 <div class="post">
-<h1>Infosec articles tagged with <b>{{ page.tag }}</b></h1>
-<ul>
-{% for post in site.tags[page.tag] %}
-  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
-    {{ post.description }}
-  </li>
-{% endfor %}
-</ul>
+	{% assign UPCASE_LIST = "ctf," | split: "," %}
+	{% assign tag_list = page.tag | split: "-" %}
+
+	{% capture temp_tag_list %}
+		{% for tag_part in tag_list %}
+			{% if UPCASE_LIST contains tag_part %}
+				{{ tag_part | upcase }}	
+			{% else %}
+				{{ tag_part | capitalize }}	
+			{% endif %}
+		{% endfor %}
+	{% endcapture %}
+
+	<h1>Infosec articles tagged with <b>{{ temp_tag_list | join: " " }}</b></h1>
+	<ul>
+		{% for post in site.tags[page.tag] %}
+		<li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})<br>
+			{{ post.description }}
+		</li>
+		{% endfor %}
+	</ul>
 </div>
 <hr>
 

@@ -3,7 +3,7 @@ layout: post
 title: "DeadFace CTF 2022 Writeups"
 date: 2022-10-17 20:15:00 +0530
 categories: CTF
-tags: deadface_ctf
+tags: ctf deadface-ctf 2022
 ---
 
 Welcome back to another writeup of the **DeadFace CTF**. This is probably one of the my favourite CTFs that I have been playing since 2021. There is a nicely build storyline related to a group of hackers called **DeadFace** and we'll have to stop them from breaking into systems or gathering information on the members of this group. I captured flags with **380** points of worth which landed me at the **333rd** position. So, without any further delay, let's the learning begins!

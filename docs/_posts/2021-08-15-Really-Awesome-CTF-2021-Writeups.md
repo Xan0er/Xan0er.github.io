@@ -3,7 +3,7 @@ layout: post
 title: "Really Awesome CTF 2021 Writeups"
 date: 2021-08-15 17:15:00 +0530
 categories: Infosec
-tags: ctf, ractf, writeups
+tags: ctf really-awesome-ctf 2021
 ---
 
 Welcome to my another CTF writeup. I participated in the ***Really Awesome CTF 2021*** this weekend. I was not able to solve much of the challenges due to lack of time. However, I was able to solve some of the OSINT challenges. So enjoy the writeups for these challenges.

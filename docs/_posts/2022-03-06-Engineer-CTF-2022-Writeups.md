@@ -3,7 +3,7 @@ layout: post
 title: "Engineer CTF 2022 Writeups"
 date: 2022-03-06 17:15:00 +0530
 categories: Infosec
-tags: engineer_ctf_2022
+tags: ctf engineer-ctf 2022
 ---
 
 Hello everyone, welcome to back to another one of my writeup. It's been a while since I have added a writeup for the CTFs. Last weekend, I participated in **Engineer CTF 2022**. I couldn't played many challenges since I have been rusted because I'm playing after a long time. Therefore, I ended up at **134th** position with **960** points. Enjoy the writeup.

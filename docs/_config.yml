@@ -76,3 +76,5 @@ plugins:
 avatar_source: github
 github_username: xan0er
 
+upcase_list:
+  - ctf

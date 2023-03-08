@@ -3,7 +3,7 @@ layout: post
 title: "San Diego CTF 2022 Writeups"
 date: 2022-05-08 17:15:00 +0530
 categories: CTF
-tags: sandiego_ctf
+tags: ctf sandiego-ctf 2022
 ---
 
 This week I particpated in the **San Diego CTF 2022** and it was a blast. I wasn't able to solve many challenges but I did manage to solve some of the challenges. This is the first CTF that I played on a discord server. I had a lot of fun while playing this CTF. Hope you have as much fun while reading writeups as I had when I played this CTF.

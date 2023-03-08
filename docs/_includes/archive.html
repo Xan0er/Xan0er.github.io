@@ -1,3 +1,5 @@
+{% include global_variables.html %}
+
 <!-- {% if site.plugins contains "jekyll/tagging" %}
 	{% assign size = site | tag_cloud | size %}
 	{% if size != 0 %}
@@ -20,6 +22,28 @@
 	{% for temptag in sortedtemptags %}
 		{% assign tagitems = temptag | split: '#' %}
 		{% capture tagname %}{{ tagitems[1] }}{% endcapture %}
-		<a href="/tag/{{ tagname }}">{{ tagname }}</a>
+
+		{% if UPCASE_LIST contains tagname %}
+			<a href="/tag/{{ tagname }}">{{ tagname | upcase }}</a>
+		{% else %}
+
+			{% if tagname contains "-" %}
+				{% assign tag_list = tagname | split: "-" %}
+				{% capture temp_tag_list %}
+					{% for tag_part in tag_list %}
+						{% if UPCASE_LIST contains tag_part %}
+							{{ tag_part | upcase }}	
+						{% else %}
+							{{ tag_part | capitalize }}	
+						{% endif %}
+					{% endfor %}
+				{% endcapture %}
+
+				<a href="/tag/{{ tagname }}">{{ temp_tag_list | join: " " }}</a>
+			{% else %}
+				<a href="/tag/{{ tagname }}">{{ tagname | capitalize }}</a>
+			{% endif %}
+		
+		{% endif %}
 	{% endfor %}
 </div>

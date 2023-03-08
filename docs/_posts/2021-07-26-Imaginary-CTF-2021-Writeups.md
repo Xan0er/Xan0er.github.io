@@ -3,7 +3,7 @@ layout: post
 title: "Imaginary CTF 2021 Writeups"
 date: 2021-07-26 17:15:00 +0530
 categories: Infosec
-tags: ctf, imaginaryctf, writeups
+tags: ctf imaginary-ctf 2021
 ---
 
 Hi everyone, welcome to the Xan0er's Blog. This weekend, I participated in the ***Imaginary CTF 2021*** and learned a lot of things along with a lot of fun so I want to share that learning experience with you guys. Here are some writeups of the challenges which I was able to solve during this CTF:

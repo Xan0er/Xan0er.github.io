@@ -3,7 +3,7 @@ layout: post
 title: "Hacktivitycon CTF 2021 Writeups"
 date: 2021-09-18 17:15:00 +0530
 categories: Infosec
-tags: ctf, hacktivityconctf2021
+tags: ctf hacktivitycon-ctf 2021
 ---
 
 Hi, hope you are doing well and welcome to another writeup of another awesome CTF. I participated in the Hactivitycon CTF 2021 this week and luckily I was able to solve some of the challenges of the CTF. So enjoy the writeups and if you have any feedback for me, you can reach out to me on my discordor twitter.

@@ -3,7 +3,7 @@ layout: post
 title: "DownUnder CTF 2022 Writeups"
 date: 2022-09-25 17:15:00 +0530
 categories: CTF
-tags: september-2022
+tags: ctf downunder-ctf 2022
 ---
 
 Hey fellow hackers, Welcome back to my another writeup. This week I played the **Downunder CTF 2022**. I wasn't able to solve many challenges since I was busy with some other tasks but I did manage to capture flags for some of the challenges. I managed to grab **350** points and my team ended up at **707th** position. Hope you enjoy my writeups and get to learn something new.
