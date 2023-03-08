@@ -89,7 +89,7 @@ The provided json data file is not in the proper format so first of all I fixed 
 <br><img src="/assets/images/downunder_ctf_2022/shop_knock_knock_knock_1.png" alt="shop_knock_knock_knock">
 
 <br>
-I loaded the data up in [Splunk Cloud](https://www.splunk.com/) cloud instance. Now, its time to search & analyze the log data.
+I loaded the data up in [Splunk Cloud](https://www.splunk.com/) instance. Now, its time to search & analyze the log data.
 
 <br><img src="/assets/images/downunder_ctf_2022/shop_knock_knock_knock_2.png" alt="shop_knock_knock_knock">
 
